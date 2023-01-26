@@ -12,7 +12,7 @@
   src:url("../fontes/Rubik/static/Rubik-Bold.ttf");
 }
 
-/* TITULOS */
+/* TITULOS 15, 24, 48, 64*/
 
 .titulo-grande{
   font-family: "montserrat-bold";
@@ -21,8 +21,47 @@
 }
 /* BOTÕES */
 
+.btn-generico{
+  display: inline-block;
+  font-family: "montserrat-bold";
+  color: var(--w);
+  text-transform: uppercase;
+  background-color: var(--cor-principal) ;
+  border-radius: 5px;
+  padding: 15px 30px;
+  gap: 10px;
+  
+}
 
-/* TAMANHOS */
-
+/* TAMANHOS ou ESPAÇOS */
+:root{
+  --t5: 5px;
+  --t10: 10px;
+  --t20: 20px;
+  --t50: 50px;
+  --t100: 100px;
+  --t150: 150px;
+  --t200: 200px;
+}
 
 /* CORES */
+
+:root{
+  /* principais */
+  --cor-principal: #ff2626;
+  --cor-principa-escurecida: #cc1414;
+
+  /* tons de cinza */
+  --c1: #000000;
+  --c2: #141414;
+  --c3: #292929;
+  --c4: #3D3D3D;
+  --c5: #525252;
+  --c6: #7A7A7A;
+  --c7: #8F8F8F;
+  --c8: #B8B8B8;
+  --c9: #CCCCCC;
+  --c10: #E0E0E0;
+  --c11: #F5F5F5;
+  --w: #ffffff;
+}
