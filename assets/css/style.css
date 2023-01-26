@@ -1,0 +1,31 @@
+@import url("/assets/css/elementos.css");
+#header-home{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--c1);
+}
+.navegacao-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--t20) var(--t50);
+}
+.navegacao-header ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--t20);
+}
+.navegacao-header ul li{
+  display: inline-block;
+}
+.navegacao-header ul.menu-principal li a{
+  color: var(--w);
+  font-family: "montserrat";
+  padding: 5px 10px;
+}
+.navegacao-header ul.menu-login li a{
+  color: var(--w);
+  font-family: "montserrat-bold";
+
+}

@@ -13,8 +13,16 @@
 }
 
 /* TITULOS 15, 24, 48, 64*/
+.texto-24{
+  font-size: 1.5em;
+}
 
 .titulo-grande{
+  font-family: "montserrat-bold";
+  color: #fff;
+  font-size: 3em;
+}
+.titulo-medio{
   font-family: "montserrat-bold";
   color: #fff;
   font-size: 4em;
