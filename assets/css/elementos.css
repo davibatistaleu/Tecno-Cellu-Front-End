@@ -1,0 +1,28 @@
+/* TEXTOS e FONTES*/
+@font-face {
+  font-family:'montserrat-bold';
+  src:url("../fontes/Montserrat/static/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family:'montserrat';
+  src:url("../fontes/Montserrat/static/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family:'rubik';
+  src:url("../fontes/Rubik/static/Rubik-Bold.ttf");
+}
+
+/* TITULOS */
+
+.titulo-grande{
+  font-family: "montserrat-bold";
+  color: #fff;
+  font-size: 4em;
+}
+/* BOTÕES */
+
+
+/* TAMANHOS */
+
+
+/* CORES */
