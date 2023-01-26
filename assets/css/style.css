@@ -27,5 +27,46 @@
 .navegacao-header ul.menu-login li a{
   color: var(--w);
   font-family: "montserrat-bold";
+}
 
+#apresentacao{
+  gap: var(--t200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#apresentacao img{
+  max-width: 560px;
+  background-color: blue;
+}
+#apresentacao #textos-apresentacao{
+  display: flex;
+  max-width: 650px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--t20);
+  background-color: red;
+}
+#apresentacao #textos-apresentacao ul{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+  background-color: green;
+}
+#apresentacao #textos-apresentacao ul li{
+  color: var(--w);
+  font-family: "montserrat";
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  gap: var(--t20);
+}
+#apresentacao #textos-apresentacao ul li img{
+  width: 35px;
+}
+#apresentacao #textos-apresentacao p{
+  color: var(--c7);
 }
