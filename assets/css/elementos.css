@@ -15,6 +15,7 @@
 /* TITULOS 15, 24, 48, 64*/
 .texto-24{
   font-size: 1.5em;
+  color: #fff;
 }
 
 .titulo-grande{
@@ -43,6 +44,14 @@
 }
 
 /* TAMANHOS ou ESPAÇOS */
+.container-1200{
+  max-width: 1200px;
+  width: 100%;
+  padding: 2em;
+  margin: 0 auto;
+  background-color: red;
+}
+
 :root{
   --t5: 5px;
   --t10: 10px;
