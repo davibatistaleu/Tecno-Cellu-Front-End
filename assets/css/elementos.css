@@ -16,6 +16,7 @@
 .texto-24{
   font-size: 1.5em;
   color: #fff;
+  font-family: "montserrat"
 }
 
 .titulo-grande{
@@ -49,7 +50,6 @@
   width: 100%;
   padding: 2em;
   margin: 0 auto;
-  background-color: red;
 }
 
 :root{
@@ -71,7 +71,9 @@
 
   /* tons de cinza */
   --c1: #000000;
+  --c1-5: #0a0a0a;
   --c2: #141414;
+  --c2-5: #1f1f1f;
   --c3: #292929;
   --c4: #3D3D3D;
   --c5: #525252;

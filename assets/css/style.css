@@ -143,9 +143,63 @@
 #orcamento{
   background-color: var(--c2);
   padding-top: 80px;
-  height: 100vh;
 }
 #orcamento h2{
   text-align: center;
 }
 
+#container-grid-orcamento div{
+  width: 565px;
+  height: 850px;
+  background-color: var(--c2-5);
+  border-radius: 30px;
+}
+
+#sintomas{
+  grid-area: sintomas;  
+}
+#rastreio{
+  grid-area: rastreio;
+  display: grid;
+  padding: 36px;
+  
+}
+#rastreio #background-img-rastreio{
+  width: 495px;
+  height: 675px;
+  position: relative;
+  background-color: var(--c1-5);
+}
+#rastreio #background-img-rastreio p{
+  text-align: center;
+}
+#rastreio #background-img-rastreio p::after{
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--cor-principal);
+}
+#rastreio #background-img-rastreio::after{
+  content: '';
+  display: block;
+  width: 74px;
+  height: 74px;
+  border-radius: 74px;
+  background-color: var(--c1-5);
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#container-grid-orcamento{
+  display: grid;
+  padding-top: 60px;
+  align-items: center;
+  justify-content: center;
+  grid-gap: var(--t50);
+  grid-template-areas: 'sintomas rastreio';
+}
