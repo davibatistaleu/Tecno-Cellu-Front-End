@@ -8,8 +8,12 @@
   src:url("../fontes/Montserrat/static/Montserrat-Regular.ttf");
 }
 @font-face {
-  font-family:'rubik';
+  font-family:'rubik-bold';
   src:url("../fontes/Rubik/static/Rubik-Bold.ttf");
+}
+@font-face {
+  font-family:'rubik';
+  src:url("../fontes/Rubik/static/Rubik-Regular.ttf");
 }
 
 /* TITULOS 15, 24, 48, 64*/
@@ -28,9 +32,17 @@
 .titulo-medio{
   font-family: "montserrat-bold";
   color: #fff;
-  font-size: 4em;
+  line-height: 1.4;
+  font-size: 2.5em;
 }
 /* BOTÕES */
+.link{
+  text-decoration:underline;
+  display: inline-block;
+  font-family: 'rubik';
+  font-size: 1.5em;
+  margin: 20px auto;
+}
 
 .btn-generico{
   display: inline-block;
@@ -52,6 +64,19 @@
   margin: 0 auto;
 }
 
+.container-1300{
+  max-width: 1300px;
+  width: 100%;
+  padding: 2em;
+  margin: 0 auto;
+}
+.container-1500{
+  max-width: 1500px;
+  width: 100%;
+  padding: 2em;
+  margin: 0 auto;
+}
+
 :root{
   --t5: 5px;
   --t10: 10px;
@@ -67,7 +92,12 @@
 :root{
   /* principais */
   --cor-principal: #ff2626;
-  --cor-principa-escurecida: #cc1414;
+  --cor-principal-escurecida: #cc1414;
+
+  /* cores de ênfase */
+  --cor-enfase: #ffa100;
+
+
 
   /* tons de cinza */
   --c1: #000000;
@@ -75,6 +105,7 @@
   --c2: #141414;
   --c2-5: #1f1f1f;
   --c3: #292929;
+  --c3-5: #302F2F;
   --c4: #3D3D3D;
   --c5: #525252;
   --c6: #7A7A7A;
@@ -84,4 +115,5 @@
   --c10: #E0E0E0;
   --c11: #F5F5F5;
   --w: #ffffff;
+  
 }
