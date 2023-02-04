@@ -1,31 +1,371 @@
+@import url("/assets/css/reset.css");
 @import url("/assets/css/elementos.css");
-#header-home{
+
+#header-home {
   width: 100%;
   height: 100vh;
   background-color: var(--c1);
+  position: relative;
 }
-.navegacao-header{
+#header-home * {
+  z-index: 999;
+}
+#header-home .menu-login li .btn-generico {
+  background-color: #1f1f1f;
+}
+#header-home > img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  width: 700px;
+}
+.navegacao-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: var(--t20) var(--t50);
 }
-.navegacao-header ul{
+.navegacao-header ul {
   list-style: none;
   display: flex;
   align-items: center;
   gap: var(--t20);
 }
-.navegacao-header ul li{
+.navegacao-header ul li {
   display: inline-block;
 }
-.navegacao-header ul.menu-principal li a{
+.navegacao-header ul.menu-principal li a {
   color: var(--w);
   font-family: "montserrat";
   padding: 5px 10px;
 }
-.navegacao-header ul.menu-login li a{
+.navegacao-header ul.menu-login li a {
   color: var(--w);
   font-family: "montserrat-bold";
+}
 
+#apresentacao {
+  gap: var(--t100);
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+#apresentacao h2 {
+  position: relative;
+  z-index: 0;
+}
+#apresentacao h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  width: 5px;
+  height: 1em;
+  border-radius: 5px;
+  background: var(--cor-principal);
+}
+#apresentacao img {
+  max-width: 560px;
+}
+#apresentacao #textos-apresentacao {
+  display: flex;
+  max-width: 650px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--t20);
+}
+#apresentacao #textos-apresentacao ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+}
+#apresentacao #textos-apresentacao ul li {
+  color: var(--w);
+  font-family: "montserrat";
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: var(--t20);
+}
+#apresentacao #textos-apresentacao ul li img {
+  width: 35px;
+}
+#apresentacao #textos-apresentacao p {
+  color: var(--c7);
+}
+
+#apresentacao + .btn-generico {
+  position: absolute;
+  margin-top: var(--t20);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#painel-header-home {
+  position: absolute;
+  background-color: #1f1f1f;
+  bottom: -80px;
+  padding: 20px 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4 repeat(1fr);
+}
+#painel-header-home p {
+  display: flex;
+  align-items: center;
+  font-size: 0.875em;
+  color: #fff;
+  font-family: "montserrat";
+  border-bottom: 2px solid var(--c3);
+  padding: 5px;
+}
+
+#painel-header-home p:nth-child(7),
+#painel-header-home p:last-child {
+  border: none;
+}
+#painel-header-home p:nth-child(odd) {
+  border-right: 2px solid var(--c3);
+  justify-content: flex-end;
+}
+#painel-header-home p img {
+  margin: 0 5px;
+}
+
+#orcamento {
+  background-color: var(--c2);
+  padding-top: 80px;
+}
+#orcamento h2 {
+  text-align: center;
+}
+#orcamento #outras-opcoes{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 50px;
+  
+}
+#orcamento #outras-opcoes .btn-generico{
+  background-color: var(--c1-5);
+  flex:1;
+  text-align: center;
+}
+
+
+#container-grid-orcamento #sintomas,
+#container-grid-orcamento #rastreio{
+  width: 565px;
+  height: 850px;
+  background-color: var(--c2-5);
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px -2px #000;
+}
+#background-img-rastreio{
+  border-radius: 30px;
+}
+
+#sintomas {
+  grid-area: sintomas;
+  padding: 36px;
+}
+#sintomas #background-img-rastreio{
+  width: 495px;
+  height: 675px;
+  position: relative;
+  background-color: var(--c1-5);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+#sintomas #background-img-rastreio #legenda{
+  font-size: 1.5em;
+  color: #fff;
+  font-family: 'montserrat';
+  display: inline-block;
+  height: min-content;
+  padding-top: 50px;
+}
+#sintomas #background-img-rastreio #legenda::after{
+  content: '';
+  display: block;
+  width: 250px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--cor-principal);
+  margin: 0 auto;
+  margin-top: 25px;
+}
+#sintomas #background-img-rastreio #decoracao{
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+#sintomas #background-img-rastreio #container-sintomas-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  max-width: 465px;
+  min-height: 465px;
+  gap: 35px;
+  
+}
+#sintomas #background-img-rastreio #container-sintomas-grid div{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  background-color: var(--c2);
+  max-width: 130px;
+  max-height: 130px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  
+}
+#sintomas #background-img-rastreio #container-sintomas-grid div img{
+  align-self: center;
+}
+#sintomas #background-img-rastreio div p{
+  font-family: 'montserrat';
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+#rastreio {
+  grid-area: rastreio;
+  display: grid;
+  padding: 36px;
+}
+#rastreio #background-img-rastreio {
+  width: 495px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  height: 675px;
+  position: relative;
+  background-color: var(--c1-5);
+}
+#rastreio #background-img-rastreio img {
+  display: block;
+  margin: 0 auto;
+}
+#rastreio #background-img-rastreio p {
+  text-align: center;
+  margin: 25px auto;
+}
+#rastreio #background-img-rastreio p::after {
+  content: "";
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--cor-principal);
+}
+#background-img-rastreio::after {
+  content: "";
+  display: block;
+  width: 74px;
+  height: 74px;
+  border-radius: 74px;
+  background-color: var(--c1-5);
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#container-grid-orcamento {
+  display: grid;
+  padding-top: 60px;
+  align-items: center;
+  justify-content: center;
+  grid-gap: var(--t50);
+  grid-template-areas: "sintomas rastreio";
+}
+
+#garantia-branding{
+  background-color: var(--cor-enfase);
+  padding:40px 0;
+}
+
+#garantia-branding .container-1300{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+}
+#garantia-branding .container-1300 *{
+  color: #000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#garantia-branding .container-1300 p{
+  max-width: 29ch;
+}
+
+#experiencia-branding{
+  background-color: var(--cor-principal-escurecida);
+  padding:40px 0;
+}
+
+#experiencia-branding .container-1300{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+}
+#experiencia-branding .container-1300 *{
+  color: var(--w);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#experiencia-branding .container-1300 p{
+  max-width: 29ch;
+}
+
+#confianca-branding{
+  background-color: var(--c3-5);
+  padding:40px 0;
+}
+#confianca-branding .container-1500{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+}
+#confianca-branding .container-1500 *{
+  color: #fff;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#confianca-branding .container-1500 p{
+  max-width: 29ch;
+}
+
+#uber-moto-branding{
+  background-color: var(--c2-5);
 }
