@@ -12,29 +12,68 @@
   src:url("../fontes/Rubik/static/Rubik-Bold.ttf");
 }
 @font-face {
-  font-family:'rubik';
+  font-family:'rubik';  
   src:url("../fontes/Rubik/static/Rubik-Regular.ttf");
 }
 
 /* TITULOS 15, 24, 48, 64*/
-.texto-24{
-  font-size: 1.5em;
-  color: #fff;
-  font-family: "montserrat"
+/* MONTSERRAT */
+.font-1-xxl{
+  font: normal 800 4em 'montserrat-bold', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-1-xl{
+  font: normal 800 3em 'montserrat-bold', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-1-l{
+  font: normal 800 2em 'montserrat-bold', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-1-ml{
+  font: normal 800 1.75em 'montserrat-bold', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-1-m{
+  font: normal 400 1.5em 'montserrat', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-1-s{
+  font: normal 400 1.25em 'montserrat', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-1-xs{
+  font: normal 400 1em 'montserrat', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-1-xxs{
+  font: normal 400 0.875em 'montserrat', Helvetica, Arial, and Futura;
+  color:#fff;
 }
 
-.titulo-grande{
-  font-family: "montserrat-bold";
-  line-height: 1.4;
-  color: #fff;
-  font-size: 3em;
+/* RUBIK */
+.font-2-xl{
+  font: normal 800 3em 'rubik-bold', Helvetica, Arial, and Futura;
+  color:#fff;
 }
-.titulo-medio{
-  font-family: "montserrat-bold";
-  color: #fff;
-  line-height: 1.4;
-  font-size: 2.5em;
+.font-2-l{
+  font: normal 800 2em 'rubik-bold', Helvetica, Arial, and Futura;
+  color:#fff;
 }
+.font-2-m{
+  font: normal 400 1.5em 'rubik', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-2-m{
+  font: normal 800 1.5em 'rubik-bold', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+.font-2-s{
+  font: normal 400 0.875em 'rubik', Helvetica, Arial, and Futura;
+  color:#fff;
+}
+
+
 /* BOTÕES */
 .link{
   text-decoration:underline;
@@ -46,13 +85,46 @@
 
 .btn-generico{
   display: inline-block;
-  font-family: "montserrat-bold";
+  font-family: "rubik-bold";
+  font-weight: 800;
+  color: var(--w);
+  text-transform: uppercase;
+  background-color: var(--c1-5) ;
+  border-radius: 5px;
+  padding: 15px 30px;
+  gap: 10px;
+  transition: 0.3s;
+}
+.btn-generico:hover{
+  transform: translate(0, -5px);
+  box-shadow: 0 5px 0 0 var(--c1);
+}
+.btn-cor-principal{
+  display: inline-block;
+  font-family: "rubik-bold";
+  font-weight: 800;
   color: var(--w);
   text-transform: uppercase;
   background-color: var(--cor-principal) ;
   border-radius: 5px;
   padding: 15px 30px;
   gap: 10px;
+}
+.btn-chamativo{
+  display: inline-block;
+  text-align: center;
+  font-family: "rubik-bold";
+  font-weight: 800;
+  color: var(--c2);
+  text-transform: uppercase;
+  background: linear-gradient(45deg, var(--cor-enfase)40%, #ff7b00 60% 100%);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 15px 30px;
+  gap: 10px;
+}
+.btn-chamativo:hover{
+  box-shadow: 0 18px 20px -25px var(--cor-enfase);
   
 }
 
@@ -67,7 +139,6 @@
 .container-1300{
   max-width: 1300px;
   width: 100%;
-  padding: 2em;
   margin: 0 auto;
 }
 .container-1500{
