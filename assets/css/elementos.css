@@ -17,6 +17,17 @@
 }
 
 /* TITULOS 15, 24, 48, 64*/
+.center{
+  text-align: center;
+}
+.left{
+  text-align: left;
+}
+.right{
+  text-align: right;
+}
+
+
 /* MONTSERRAT */
 .font-1-xxl{
   font: normal 800 4em 'montserrat-bold', Helvetica, Arial, and Futura;
@@ -44,6 +55,7 @@
 }
 .font-1-xs{
   font: normal 400 1em 'montserrat', Helvetica, Arial, and Futura;
+  line-height: 1.3;
   color:#fff;
 }
 .font-1-xxs{

@@ -203,7 +203,6 @@
   bottom: -5px;
   transform: translateX(-50%);
 }
-
 #container-grid-orcamento #sintomas #container-sintomas-grid{
   display: grid;
   width:fit-content;
@@ -233,7 +232,6 @@
   border-radius: 75px;
   margin: 24px auto 0 auto;
 }
-
 #container-grid-orcamento #rastreio #background-canvas-rastreio{
   background-color: var(--c1-5);
   border-radius: 20px;
@@ -245,7 +243,6 @@
   align-items: center;
   position: relative;
 }
-
 #container-grid-orcamento #rastreio{
     width: 100%;
     padding: 20px;
@@ -256,7 +253,6 @@
   display: inline-block;
   max-width: 450px;
 }
-
 #orcamento .container-1300{
   padding-bottom: 50px;
 }
@@ -264,4 +260,216 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+#garantia{
+  background-color: var(--cor-enfase);
+  padding: 30px 40px;
+}
+.branding{
+  display: grid;
+  grid-template-areas: 'esquerdo direito';
+  grid-auto-flow: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.branding div{
+  max-width:500px;
+  width: 100%;
+}
+.branding div *{
+  text-align: center;
+  margin-top: 5px auto;
+  color: #000;  
+  display: block;
+}
+.branding .esquerdo{
+  grid-area: esquerdo;
+}
+.branding .direito{
+  grid-area: direito;
+}
+#experiencia{
+  background-color: #df0000;
+  padding: 30px 40px;
+}
+#confianca{
+  background-color: var(--c2-5);
+  padding: 30px 40px;
+}
+#confianca div h4{
+  color: #fff;
+}
+#confianca div *:not(h4){
+  max-width: 70ch;
+  color: var(--c10);
+}
+
+#uber-moto-branding{
+  background-color: var(--c2);
+}
+#uber-moto-branding h5{
+  list-style: square;
+}
+#uber-moto-branding h5 img{
+  width: 20px;
+}
+
+#equipe{
+  background-color: var(--c2-5);
+}
+
+#equipe .flex{
+  display: flex;
+  flex-wrap: nowrap;
+  flex:1;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width:1400px) {
+  #equipe .flex{
+    transform: scale(0.875);
+  }  
+}
+
+#equipe .flex .flex-container-item{
+  flex: 0 0 300px;
+  max-height: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--c2-5);
+  box-shadow: 7px 7px 20px #141414, -7px -7px 20px #2A2A2A;
+  border-radius: 20px; 
+  gap: 50px;
+  
+}
+#equipe .flex .flex-container-item *{
+  text-align: center;
+  align-self: self-start;
+}
+#equipe .flex .flex-container-item{
+  align-items: ce;
+}
+#equipe .flex .flex-container-item div{
+  position: relative;
+}
+#equipe .flex .flex-container-item img{
+  align-self: self-end;
+  height: 100%;
+  max-height: 132px;
+}
+#equipe .flex .flex-container-item div::before{
+  content: '';
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  border-radius: 5px;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.vermelho::before{
+  background-color: red;
+}
+.amarelo::before{
+  background-color: yellow;
+}
+.verde::before{
+  background-color: green;
+}
+.roxo::before{
+  background-color: purple;
+}
+#equipe .container-1200 .flex p{
+  color: var(--c8);
+}
+#equipe .container-1200 .flex + p{
+  margin-top: 50px;
+}
+
+#footer{
+  background-color: var(--c3);
+}
+
+#footer p#endereco{
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  color: var(--c10);
+  background-color: var(--c1);
+}
+
+#footer .container-1200{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#footer .container-1200 h2{
+  width: 100%;
+}
+#grid-footer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+#horario-funcionamento{
+  width: 100%;
+}
+
+#flex-box-horarios{
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+#flex-box-horarios div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 25px 0px;
+  border-bottom: 2px solid var(--c2-5);
+}
+#flex-box-horarios div h6{
+  color: var(--c9) ;
+}
+
+#grid-footer{
+  margin-top: 30px;
+}
+#grid-footer #links{
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+}
+#grid-footer #contato h5{
+  margin-top: 10px;
+  font-size: 1.25em;
+  color: var(--c9);
+}
+#grid-footer #redes-sociais{
+  margin-top: 30px;
+}
+#grid-footer #redes-sociais p{
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+#grid-footer #redes-sociais p img{
+  max-width: 1.5em;
+}
+#footer .container-1200 p{
+  margin-top: 50px;
 }
