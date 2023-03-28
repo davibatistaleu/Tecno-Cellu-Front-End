@@ -1,0 +1,12 @@
+@import url(../utilitarios/cores.css);
+@import url(../utilitarios/tipografia.css);
+@import url(../utilitarios/reset.css);
+@import url(../utilitarios/componentes.css);
+@import url(../utilitarios/responsivo.css);
+@import url(../utilitarios/animacoes.css);
+
+@import url(../partes/index-header.css);
+@import url(../partes/index-orcamento.css);
+@import url(../partes/index-brandindEUberFlash.css);
+@import url(../partes/index-nossaEquipe.css);
+@import url(../partes/index-footer.css)

@@ -1,0 +1,283 @@
+@import url(../utilitarios/reset.css);
+@import url(../utilitarios/cores.css);
+@import url(../utilitarios/tipografia.css);
+@import url(../utilitarios/componentes.css);
+body {
+  overflow: hidden;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-color: var(--cor-2);
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+font-1-xl{
+  font-weight: 500;
+}
+header nav {
+  width: 100%;
+}
+header nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+#cadastro-canvas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1200px;
+  height: 720px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.img-canvas {
+  width: 100%;
+  height: 100%;
+  background: center center / cover no-repeat url(../../imagens/cadastro-background.gif);
+  position: relative;
+  z-index: 0;
+}
+.img-canvas p{
+  color: var(--cor-1);
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 20px 20px 1em 20px;
+  font-family: 'rubik-bold';
+}
+.numeros, .mais{
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--cor-positiva);
+}
+.form-canvas {
+  display: grid;
+  align-content: center;
+  background-color: var(--cor-3);
+}
+.form-canvas h1 {
+  color: var(--cor-primaria);
+  font-family: "universal montserrat";
+  font-weight: 600;
+  font-size: 3em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.canvas-input{
+  border-radius: 2px;
+  background-color: var(--cor-6);
+  position: relative;
+  padding: 5px;
+}
+.canvas-input .container-label {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: .5s;
+}
+.container-label label {
+  color: var(--cor-15);
+  font-size: 1em;
+  font-family: "universal rubik";
+  font-weight: 400;
+  line-height: 0;
+}
+.canvas-input input{
+  z-index: 2;
+  background-color: transparent;
+}
+.canvas-input input:placeholder-shown ~ .container-label{
+  color: var(--cor-15);
+  font-size: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+.canvas-input input:focus ~ .container-label{
+  color: var(--cor-10);
+  font-size: 0.875em;
+  top: 0px;
+  transform: translateY(0);
+  left: 5px;
+  z-index: 3;
+}
+.canvas-input input:invalid ~ .container-label{
+  color: var(--cor-10);
+  font-size: 0.875em;
+  top: 0px;
+  transform: translateY(0);
+  left: 12px;
+}
+.canvas-input input:not(:placeholder-shown) ~ .container-label{
+  color: var(--cor-10);
+  font-size: 0.875em;
+  top: 0px;
+  transform: translateY(0);
+  left: 5px;
+  z-index: 3;
+}
+form {
+  padding: 0 0px;
+  max-width: 350px;
+  width: max-content;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px 12px;
+  grid-template-areas:
+    "nome sobrenome"
+    "email email"
+    "senha senha"
+    "confirmacao confirmacao"
+    "termos termos"
+    "btn btn";
+}
+input {
+  max-width: 350px;
+  width: 100%;
+  background-color: var(--cor-6);
+  border: none;
+  border-radius: 2px;
+  padding: 12px 12px;
+  position: relative;
+  color: var(--cor-15);
+  font-weight: 500;
+  font-family: "universal rubik";
+  outline: none;  
+  border:1px solid transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  border: 1px solid transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-shadow: 0 0 0px 1000px var(--cor-4) inset;
+  transition: background-color 6000s ease-in-out 6000s;
+}
+input:focus{
+  border:1px solid var(--cor-15);
+}
+input:invalid{
+  border-color: red;
+}
+
+#container-nome {
+  grid-area: nome;
+}
+#container-sobrenome {
+  grid-area: sobrenome;
+}
+#container-email {
+  grid-area: email;
+}
+#container-senha {
+  grid-area: senha;
+}
+#container-confirmacao {
+  grid-area: confirmacao;
+}
+.termos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  grid-area: termos;
+}
+label[for="termos"], label[for="notificacoes"]{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--cor-15);
+  font-family: "universal rubik";
+  font-weight: 400;
+  font-size: 0.875em;
+  position: relative;
+}
+label[for="termos"] p, label[for="notificacoes"] p{
+  margin-top: 0px;
+}
+span {
+  color: var(--cor-primaria);
+}
+label input[type="checkbox"] {
+  height: 12px;
+  width: 12px;
+}
+#btn-cadastro {
+  grid-area: btn;
+  background-color: var(--cor-primaria);
+  color: var(--cor-3);
+  font-family: "universal rubik";
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 40px rgba(255, 0, 46, 0.25);
+}
+#btn-cadastro:hover {
+  background-color: var(--cor-primaria-escurecida);
+}
+.form-canvas p {
+  color: var(--cor-15);
+  font-family: "universal montserrat";
+  font-size: 0.875em;
+  margin: 0 auto;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.form-canvas p a{
+  color: var(--cor-primaria);
+}
+.form-canvas p a:hover{
+  text-decoration: underline;
+}
+
+
+@media (min-width:250px) and (max-width:550px){
+  #cadastro-canvas{
+    width: 95vw;
+    grid-template-columns: 1fr;
+  }
+  .img-canvas{
+    display: none;
+  }
+  main{
+    background-image: url(../../imagens/cadastro-background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: initial;
+    transform: none;
+    padding: 10px;
+    background-color: var(--cor-3);
+  }
+  #cadastro-canvas{
+    margin: 10px 0;
+  }
+}

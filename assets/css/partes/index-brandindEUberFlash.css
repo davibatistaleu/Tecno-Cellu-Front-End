@@ -1,0 +1,138 @@
+.branding{
+  padding: 50px;
+}
+#garantia {
+  background-color: var(--cor-enfase);
+}
+#garantia .grid * {
+  color: var(--cor-3);
+}
+#experiencia {
+  background-color: var(--cor-primaria-escurecida);
+}
+#experiencia .grid * {
+  color: var(--cor-15);
+}
+#confianca {
+  background-color: var(--cor-5);
+}
+#confianca .grid * {
+  color: var(--cor-15);
+}
+.grid {
+  display: grid;
+  grid-template-areas: "esquerdo direito";
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+.grid * {
+  text-align: center;
+}
+.grid h4 {
+  width: max-content;
+}
+.grid .textos {
+  width: min-content;
+}
+.esquerdo {
+  grid-area: esquerdo;
+}
+.direito {
+  grid-area: direito;
+}
+
+#confianca .grid {
+  padding: 0;
+  gap: 100px;
+}
+
+#uber-flash {
+  padding: 80px 0;
+  background-color: var(--cor-2);
+  display: grid;
+  justify-items: center;
+}
+@media (min-width: 1025px) and (max-width: 1250px) {
+  .grid .textos {
+    grid-area: textos;
+  }
+  .grid {
+    grid-template-areas: "textos";
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .grid .branding-img {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid .textos {
+    grid-area: textos;
+  }
+  .grid {
+    grid-template-areas: "textos";
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .grid .branding-img {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .grid .textos {
+    grid-area: textos;
+  }
+  .grid {
+    grid-template-areas: "textos";
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .grid .branding-img {
+    display: none;
+  }
+  .branding{
+    padding:50px 10px;
+  }
+  .grid .textos{
+    grid-area: textos;
+  }
+  .grid {
+    grid-template-areas: "textos";
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .grid .branding-img {
+    display: none;
+  }
+  .grid * {
+    text-align: center;
+  }
+  .grid h4 {
+    min-width: 10ch;
+    width: min-content;
+  }
+  .grid .textos {
+    min-width: 20ch;
+  }
+  .grid .textos *{
+    margin:0 auto;
+  }
+  .esquerdo {
+    grid-area: esquerdo;
+  }
+  .direito {
+    grid-area: direito;
+  }  
+  #uber-flash {
+    padding: 80px 20px;
+    font-size: 0.875em;
+    background-color: var(--cor-2);
+    display: grid;
+    justify-items: center;
+  }
+}

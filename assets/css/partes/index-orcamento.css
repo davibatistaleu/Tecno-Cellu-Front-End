@@ -1,0 +1,227 @@
+#orcamento {
+  background-color: var(--cor-2);
+  padding: 80px 0px;
+}
+#orcamento #grid-orcamento {
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #orcamento #grid-orcamento {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+}
+#sintomas {
+  background-color: var(--cor-3);
+  width: min-content;
+  border-radius: 20px;
+  padding: 20px;
+}
+#decoração-bolinhas {
+  justify-self: self-end;
+  padding: 15px;
+}
+#sintomas span {
+  display: block;
+  width: 74px;
+  height: 74px;
+  background-color: var(--cor-1);
+  border-radius: 74px;
+  margin: 15px auto 0 auto;
+}
+
+.canvas-bg {
+  display: grid;
+  background-color: var(--cor-1);
+  padding: 16px;
+  border-radius: 20px;
+}
+#grid-sintomas + p {
+  margin: 20px auto;
+}
+#grid-sintomas + p::after {
+  content: "";
+  width: 200px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--cor-primaria);
+  display: block;
+  margin: 5px auto;
+}
+#grid-sintomas {
+  display: grid;
+  width: min-content;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+#grid-sintomas a {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#grid-sintomas a li {
+  display: flex;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-2);
+}
+#grid-sintomas a li:hover {
+  box-shadow: 0 0 0px 2px var(--cor-15);
+  background-color: var(--cor-enfase);
+}
+#grid-sintomas a li img {
+  max-width: 72px;
+  max-height: 70px;
+}
+
+#andamento {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--cor-3);
+  max-width: 460px;
+  width: max-content;
+}
+#andamento .canvas-bg {
+  display: grid;
+  grid-template-rows: max-content min-content;
+  justify-items: center;
+}
+#container-img-andamento {
+  padding: 75px 0;
+}
+#andamento span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: var(--cor-1);
+  border-radius: 74px;
+  margin: 15px auto 0 auto;
+}
+#orcamento #flex-btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 110ch;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #grid-orcamento {
+    margin: 80px auto;
+    gap: 150px;
+    justify-items: center;
+  }
+  #andamento {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--cor-3);
+    max-width: 500px;
+    width: max-content;
+  }
+  #sintomas span{
+    width: 60px;
+    height: 60px;
+  }
+  #andamento span{
+    width: 60px;
+    height: 60px;
+  }
+  #andamento .btn-genrico-cor-enfase{
+    padding: 5px 10px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #grid-orcamento {
+    margin: 80px auto;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 100px;
+    justify-items: center;
+  }
+  #sintomas {
+    background-color: var(--cor-3);
+    width: min-content;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  #andamento {
+    border-radius: 20px;
+    padding: 10px !important;
+    background-color: var(--cor-3);
+    min-width: 250px;
+    max-width: 320px;
+    width: 100%;
+  }
+  #container-img-andamento {
+    padding: 40px 0;
+  }
+  .canvas-bg {
+    display: grid;
+    background-color: var(--cor-1);
+    padding: 10px;
+    border-radius: 20px;
+  }
+  #sintomas .canvas-bg {
+    width: min-content;
+  }
+  #grid-sintomas {
+    display: grid;
+    width: min-content;
+    gap: 5px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  #grid-sintomas a li {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    padding: 20px;
+  }
+  #grid-sintomas a li img {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  #flex-btns {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  #flex-btns a {
+    width: 100%;
+  }
+  #sintomas span {
+    height: 60px;
+    width: 60px;
+  }
+  #andamento {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--cor-3);
+    min-width: 320px;
+    max-width: 500px;
+    width: 320px;
+  }
+  #flex-btns{
+    width: 100% !important;
+    padding: 30px;
+    flex-wrap:wrap;
+    flex:1 !important;
+  }
+}

@@ -1,0 +1,39 @@
+/* Cores de Base */
+:root{
+  --cor-0: #000000;
+  --cor-1: #0A0A0A;
+  --cor-2: #141414;
+  --cor-3: #1F1F1F;
+  --cor-4: #292929;
+  --cor-5: #302F2F;
+  --cor-6: #3D3D3D;
+  --cor-7: #525252;
+  --cor-8: #7A7A7A;
+  --cor-9: #8F8F8F;
+  --cor-10: #B8B8B8;
+  --cor-11: #CCCCCC;
+  --cor-12: #E0E0E0;
+  --cor-13: #F5F5F5;
+  --cor-14: #F7F7F7;
+  --cor-15: #FFFFFF;
+}
+
+/* Cor Primária */
+:root{
+  --cor-primaria-escurecida: #CC1414;
+  --cor-primaria: #FF2626;
+}
+
+/* Cor Secudaria / Ênfase */
+:root{
+  --cor-enfase-dark: #412a00;
+  --cor-enfase-escurecida: #da8d00;
+  --cor-enfase: #ffa100;
+  --cor-enfase-light: #ffbb00;
+}
+
+/* Cores de Informação */
+:root{
+  --cor-positiva: #14cc76;
+  --cor-aviso: #ffbb00;
+}

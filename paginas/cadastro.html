@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastre-se agora na Tecno cellu</title>
+    <link rel="stylesheet" href="../assets/css/partes/cadastro.css" />
+    <script src="/assets/scripts/cadastro.js" type="module" defer></script>
+  </head>
+  <body>
+    <main>
+      <header id="header" class="container-1200">
+        <nav>
+          <ul>
+            <li>
+              <a class="page-link" href="../index.html"
+                ><img
+                  src="../assets/imagens/icones/setaesquerda.svg"
+                  alt=""
+                  srcset=""
+                />
+                Home</a
+              >
+            </li>
+            <li>
+              <a class="page-link" href="login.html"
+                >Login
+                <img
+                  src="../assets/imagens/icones/setadireita.svg"
+                  alt=""
+                  srcset=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="cadastro-canvas">
+        <div class="img-canvas">
+          <p><span class="mais">+</span><span class="numeros" data-anime="numero">15000</span> Usuários</p>
+        </div>
+        <div class="form-canvas">
+          <h1>Cadastre-se</h1>
+          <form action="">
+            <div class="canvas-input" id="container-nome">
+              <input placeholder=" " type="text" id="nome" />
+              <div class="container-label">
+                <label for="nome">Nome:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-sobre">
+              <input placeholder=" " type="text" id="sobrenome" />
+              <div class="container-label">
+                <label for="nome">Sobrenome:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-email">
+              <input placeholder=" " type="email" name="" id="email" />
+              <div class="container-label">
+                <label for="nome">Email:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-senha">
+              <input placeholder=" " type="password" id="senha" />
+              <div class="container-label">
+                <label for="nome">Senha:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-confirmacao">
+              <input placeholder=" " type="password" id="confirmacao" />
+              <div class="container-label">
+                <label for="nome">Corfirme sua senha:</label>
+              </div>
+            </div>
+            <div class="termos">
+              <label for="notificacoes">
+                <input type="checkbox" checked name="" id="notificacoes" />
+                <p>
+                  Eu aceito receber notificações promocionais e atualizações via
+                  e-mail.
+                </p>
+              </label>
+              <label for="termos">
+                <input type="checkbox" name="" id="termos" />
+                <p>
+                  Ao clicar em cadastrar, você concorda com os termos de
+                  <span>Politica e Privacidade</span>.
+                </p>
+              </label>
+            </div>
+            <input type="button" value="Cadastrar" id="btn-cadastro" />
+          </form>
+          <p>Já tem um cadastro? <a href="login.html">Efetue seu login</a></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

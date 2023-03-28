@@ -1,0 +1,116 @@
+#footer{
+  background-color: var(--cor-2);
+  padding: 80px 0 0 0;
+}
+
+#grid-footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  gap: 40px;
+  margin: 20px auto;
+  padding: 30px 0 50px 0;
+}
+#horario-de-funcionamento-grid{
+  width: 100%;
+}
+#cronograma-grid{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+#cronograma-grid div{
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 2px solid var(--cor-7);
+  justify-content: space-between;
+  align-items: center;
+}
+#links p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#grid-footer + p{
+  margin: 50px 0;
+}
+#footer p{
+  color: var(--cor-10);
+}
+#footer > p{
+  background-color: var(--cor-0);
+  padding: 20px 0;
+}
+@media (min-width: 1024px) and (max-width: 1250px){
+  #grid-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    justify-items: center;
+    gap: 40px;
+    margin: 20px auto 0 auto;
+    padding: 0 50px;
+  }
+  #footer h3{
+    margin-left: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+  #grid-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    justify-items: center;
+    gap: 40px;
+    margin: 20px auto 0 auto;
+    padding: 30px 0 0px 0;
+  }
+  #horario-de-funcionamento-grid{
+    min-width: 430px;
+    width: max-content;
+  }
+  #links{
+    border-top: 2px solid var(--cor-5);
+    padding: 10px 100px;
+  }
+  #grid-footer + p{
+    margin-bottom: 50px;
+  }
+  #footer h3{
+    margin-left: 50px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #footer .container-1200{
+    padding: 0 20px;
+  }
+  #grid-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 40px;
+    margin: 20px auto 0 auto;
+    padding: 30px 0 0px 0;
+  }
+  #horario-de-funcionamento-grid{
+    min-width: 340px;
+    width: max-content;
+  }
+  #links{
+    border-top: 2px solid var(--cor-5);
+    padding: 10px 0px;
+  }
+  #grid-footer + p{
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 650px) and (max-width: 767px){
+  #grid-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  }
+}

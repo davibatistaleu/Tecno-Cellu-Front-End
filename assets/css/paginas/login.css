@@ -1,0 +1,347 @@
+@import url(../utilitarios/reset.css);
+@import url(../utilitarios/cores.css);
+@import url(../utilitarios/tipografia.css);
+@import url(../utilitarios/componentes.css);
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-2);
+}
+
+.grid-login{
+  display: grid;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--cor-3);
+  border-radius: 10px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.canvas-form{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  padding: 80px;
+  justify-items: center;
+  align-content: center; 
+}
+.canvas-form h5{
+  font-family: 'universal rubik';
+  font-weight: 500;
+  font-size: 3em;
+  text-align: center;  
+  color: var(--cor-primaria); 
+}
+
+.canvas-form h2{
+  font-family: 'universal rubik';
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: 2em;
+  max-width: 35ch;
+  text-align: center;
+  color: var(--cor-8);
+}
+.canvas-form::after{
+  content: '';
+  display: block;
+  position: absolute;
+  left: -40px;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-3);
+  transform: skew(6deg);
+}
+.canvas-horario{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--cor-15);
+  font-family: 'universal rubik';
+  font-weight: 400;
+  font-size: 3em;
+  background: center bottom / cover no-repeat;
+}
+.container-entrar-com-outrar-redes{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.facebook{
+  color: cornflowerblue;
+  font-family: 'universal montserrat';
+  font-weight: 700;
+}
+.google{
+  color: rgb(237, 105, 100);
+  font-family: 'universal montserrat';
+  font-weight: 700;
+}
+.container-entrar-com-outrar-redes a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 2px;
+  padding-right: 10px;
+  border-radius: 100px;
+  background-color: #fff;
+}
+
+.entrar-com-google{
+  color: var(--cor-8);
+  font-size: 0.875em;
+  margin: 25px 0 15px 0;
+  font-family: "universal montserrat";
+}
+
+#relogio, #frase{
+  font-weight: 500;
+}
+
+#data{
+  font-size: 0.30em;
+}
+
+.container-dados-horario{
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  width: 100%;
+  height: 100%;
+}
+.container-dados-horario #dia{
+  font-size: 0.3em;
+}
+
+.canvas-input{
+  border-radius: 2px;
+  border: 2px solid transparent;
+  background-color: var(--cor-6);
+  position: relative;
+  padding:5px 10px;
+}
+.canvas-input .container-label {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: .5s;
+}
+.container-label label {
+  color: var(--cor-15);
+  font-size: 1em;
+  font-family: "universal rubik";
+  font-weight: 400;
+  line-height: 0;
+}
+.canvas-input input{
+  z-index: 2;
+  background-color: transparent;
+}
+.canvas-input input:placeholder-shown ~ .container-label{
+  color: var(--cor-15);
+  font-size: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+.canvas-input input:focus ~ .container-label{
+  color: var(--cor-10);
+  font-size: 1em;
+  top: 0px;
+  transform: translateY(0);
+  left: 5px;
+  z-index: 3;
+}
+.canvas-input:has(input:focus){
+  border: 2px solid white;
+  
+}
+.canvas-input input:invalid ~ .container-label{
+  color: var(--cor-15);
+  font-size: 1em;
+  top: 0px;
+  transform: translateY(0);
+  left: 12px;
+}
+.canvas-input:has(input:invalid){
+  transition-delay: 4s;
+  border-color: red;
+}
+.canvas-input input:not(:placeholder-shown) ~ .container-label{
+  font-size: 1em;
+  top: 0px;
+  transform: translateY(0);
+  left: 5px;
+  z-index: 3;
+}
+form {
+  padding: 0 0px;
+  max-width: 350px;
+  width: max-content;
+  margin:1em auto 0 auto;
+  display: grid;
+  gap: 12px 12px;
+  min-width: 350px;
+  grid-template-areas:
+    "nome sobrenome"
+    "email email"
+    "senha senha"
+    "confirmacao confirmacao"
+    "esqueci-senha mostrar"
+    "btn btn";
+}
+input {
+  max-width: 350px;
+  width: 100%;
+  background-color: var(--cor-6);
+  border: none;
+  border-radius: 2px;
+  padding: 12px 12px;
+  position: relative;
+  color: var(--cor-15);
+  font-weight: 500;
+  font-family: "universal rubik";
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  border: 1px solid transparent;
+  -webkit-text-fill-color: var(--cor-15);
+  -webkit-box-shadow: 0 0 0px 1000px var(--cor-6) inset;
+  transition: border-color 6000s ease-in-out 6000s;
+  transition: background-color 6000s ease-in-out 6000s;
+}
+.cavnas-input:has(input:invalid){
+  border-color: red;
+}
+
+#container-nome {
+  grid-area: nome;
+}
+#container-sobrenome {
+  grid-area: sobrenome;
+}
+#container-email {
+  grid-area: email;
+}
+#container-senha {
+  grid-area: senha;
+}
+#container-confirmacao {
+  grid-area: confirmacao;
+}
+
+#mostrar{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  right: 0px;
+  background-color: var(--cor-3);
+  box-shadow: 2px 2px 4px #313131,-2px -2px 4px #494949,0px 0px 0px 2px white;
+  border: none;
+  border-radius: 3px;
+  border-bottom-right-radius: 3px;
+  aspect-ratio: 1/1;
+  padding: 5px;
+  opacity: 0.5;
+  height: 99%;
+}
+#mostrar:hover{
+  cursor: pointer;
+}
+
+label[for="esqueci-senha"]{
+  grid-area: esqueci-senha;
+  justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--cor-primaria);
+  font-family: "universal montserrat";
+  font-weight: 600;
+  font-size: 1em;
+  position: relative;
+  margin: 0px 0 15px 0;
+}
+label[for="esqueci-senha"]:hover{
+  text-decoration: underline;
+}
+span {
+  color: red;
+}
+label input[type="checkbox"] {
+  height: 12px;
+  width: 12px;
+}
+#btn-cadastro {
+  grid-area: btn;
+  background-color: var(--cor-primaria);
+  color: var(--cor-3);
+  font-family: "universal rubik";
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 40px rgba(255, 0, 46, 0.25);
+}
+#btn-cadastro:hover {
+  cursor: pointer;
+  background-color: var(--cor-primaria-escurecida);
+}
+
+.registre-se{
+  margin-top: 30px;
+  font-family: 'universal montserrat';
+  color: var(--cor-15);
+}
+.registre-se a{
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+.registre-se a:hover{
+  text-decoration: underline;
+}
+
+.form-canvas a {
+  color: var(--cor-15);
+  font-family: "universal montserrat";
+  font-size: 0.775em;
+  margin: 0 auto;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: 12px;
+}
+
+@media (min-width:900px) AND (max-width: 1279px){
+  .canvas-form h5{
+    max-width:10ch;
+  }
+
+  .grid-login{
+    transform: scale(0.775);
+  }
+}
